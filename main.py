@@ -9,9 +9,9 @@ def read_root():
 
 @app.post("/generate-video/")
 async def generate_video(image: UploadFile = File(...), description: str = ""):
-    # Mô phỏng phản hồi (vì chưa tích hợp AI thật)
+    # Trả về video mẫu có thật
     return JSONResponse(content={
-        "video_url": "https://your-video-hosting.com/sample.mp4",
+        "video_url": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
         "status": "success",
         "input_description": description
     })
